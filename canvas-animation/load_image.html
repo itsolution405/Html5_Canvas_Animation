@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Image</title>
+</head>
+
+<body>
+    <canvas id="canvas" width="300" height="300"></canvas>
+
+    <script>
+        var canvas = document.getElementById("canvas");
+        var context = canvas.getContext("2d");
+
+        var myImg = new Image();
+        myImg.src = "Spesial_Team.png";
+
+        myImg.onload = function() {
+            context.drawImage(myImg, 0, 0, myImg.width / 4, myImg.height / 4);
+        };
+    </script>
+</body>
+
+</html>
